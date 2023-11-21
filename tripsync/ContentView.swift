@@ -4,9 +4,7 @@ struct ContentView: View {
     @State private var isPresented = false
     @State var myDismiss = false
     @State var selected = 0
-    
-    @State private var tripname: [String] = []
-    
+    @State private var datas = ViewModel()
     
     var body: some View {
         
@@ -14,10 +12,10 @@ struct ContentView: View {
             ScrollView(.vertical){
                 Spacer()
                 VStack{
-                    ForEach(tripname.indices, id: \.self) { index in
-                        NavigationLink(destination: MainView(dismissed: $myDismiss, index: selected)) {
+                    ForEach(datas.tripsinfos) { trip in
+                        NavigationLink(destination: MainView(trip: trip)) {
                             HStack {
-                                Text(tripname[index])
+                                Text(trip.nameTrip)
                                     .foregroundColor(.black)
                                     .font(.title)
                                     .fontWeight(.bold)
@@ -25,8 +23,6 @@ struct ContentView: View {
                                 Image(systemName: "chevron.right")
                                     .foregroundColor(.black)
                                     .font(.title)
-                            }.onTapGesture {
-                                selected = index
                             }
                             .padding()
                             .background(
@@ -42,11 +38,12 @@ struct ContentView: View {
                         isPresented.toggle()
                     })
                 .fullScreenCover(isPresented: $isPresented) {
-                    NewProjectView(tripname: $tripname, dismissed: $myDismiss)
+                    
+                    NewProjectView(dismissed: $myDismiss)
                 }
                 
                 .navigationDestination(isPresented: $myDismiss){
-                    MainView(dismissed: $myDismiss, index: selected)
+                    MainView(trip: datas.tripsinfos.last ?? tripinfo())
                 }
                 
                 
@@ -58,6 +55,4 @@ struct ContentView: View {
 }
         
     
-#Preview {
-    ContentView()
-}
+

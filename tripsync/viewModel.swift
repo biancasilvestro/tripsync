@@ -5,12 +5,7 @@
 //  Created by Bianca Silvestro  on 20/11/23.
 //
 import Foundation
-import Combine
 
 class ViewModel: ObservableObject {
-    @Published var tripsinfos: [tripinfo] = []
-    
-    func addTrip(trip: tripinfo) {
-        tripsinfos.append(trip)
-    }
+    @Published var tripsinfos: [tripinfo] = [tripinfo(nameTrip: "Barcellona", countryTrip: "Ciao"), tripinfo(nameTrip: "Naboli", countryTrip: "hola")]
 }

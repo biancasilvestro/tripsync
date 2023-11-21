@@ -2,14 +2,14 @@ import SwiftUI
 
 struct NewProjectView: View {
     @Environment(\.dismiss) var dismiss
-    @Binding var tripname: [String]
-    @State private var newTripName = ""
-    @State private var selectedCountryIndex = 0
-    @State private var startDate = Date()
-    @State private var endDate = Date()
+    //@Binding var tripname: [String]
+    @State  var newTripName = ""
+    @State  var selectedCountryIndex = 0
+    @State  var startDate = Date()
+    @State  var endDate = Date() 
     @Binding var dismissed: Bool
     
- 
+     @State var datas = ViewModel()
     
     let countries = ["Country 1", "Country 2", "Country 3"]
     
@@ -44,12 +44,15 @@ struct NewProjectView: View {
             .navigationBarItems(
                 trailing: Button(action: {
                     if newTripName == "" {
-                        tripname.append("trip \(tripname.count)")
+                        print("vuoto")
+                        let newTrip = tripinfo(nameTrip: String(datas.tripsinfos.count))
+                        datas.tripsinfos.append(newTrip)
                     }else{
-                        tripname.append(newTripName)}
+                        print("qui")
+                        let newTrip = tripinfo(nameTrip: newTripName, countryTrip: countries[selectedCountryIndex], datedep: startDate, datearr: endDate)
+                        datas.tripsinfos.append(newTrip)}
                     dismiss()
                     dismissed=true
-                    //print(dismissed)
                 }) {
                     Text("Create")
                         .foregroundColor(.white)
@@ -68,8 +71,4 @@ struct NewProjectView: View {
     private func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
-}
-
-#Preview {
-    NewProjectView(tripname: .constant([ ]), dismissed: .constant(false))
 }
