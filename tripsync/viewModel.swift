@@ -7,5 +7,6 @@
 import Foundation
 
 class ViewModel: ObservableObject {
-    @Published var tripsinfos: [tripinfo] = [tripinfo(nameTrip: "Barcellona", countryTrip: "Ciao"), tripinfo(nameTrip: "Naboli", countryTrip: "hola")]
+    @Published var tripsinfos: [Trip] = [Trip(nameTrip: "Disneyland🎢", countryTrip: "France"), 
+                                         Trip(nameTrip: "Forza Napoli🩵", countryTrip: "Naboli")]
 }

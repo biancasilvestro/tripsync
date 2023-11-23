@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4214DF9A2B0670340025BAF5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214DF992B0670340025BAF5 /* MainView.swift */; };
-		4221DD472B0BB9EA00F6E0EB /* modelinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221DD462B0BB9EA00F6E0EB /* modelinfo.swift */; };
+		4221DD472B0BB9EA00F6E0EB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221DD462B0BB9EA00F6E0EB /* Trip.swift */; };
 		4221DD492B0BBB3200F6E0EB /* viewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221DD482B0BBB3200F6E0EB /* viewModel.swift */; };
 		42342D6C2B03D61500505061 /* additemtolist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42342D6B2B03D61500505061 /* additemtolist.swift */; };
 		42496EAA2AFE54DE00B299BC /* tripsyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42496EA92AFE54DE00B299BC /* tripsyncApp.swift */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		4214DF992B0670340025BAF5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		4221DD462B0BB9EA00F6E0EB /* modelinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelinfo.swift; sourceTree = "<group>"; };
+		4221DD462B0BB9EA00F6E0EB /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		4221DD482B0BBB3200F6E0EB /* viewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModel.swift; sourceTree = "<group>"; };
 		42342D6B2B03D61500505061 /* additemtolist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = additemtolist.swift; sourceTree = "<group>"; };
 		42496EA62AFE54DE00B299BC /* tripsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tripsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +64,7 @@
 			children = (
 				42496EA92AFE54DE00B299BC /* tripsyncApp.swift */,
 				42496EAB2AFE54DE00B299BC /* ContentView.swift */,
-				4221DD462B0BB9EA00F6E0EB /* modelinfo.swift */,
+				4221DD462B0BB9EA00F6E0EB /* Trip.swift */,
 				4221DD482B0BBB3200F6E0EB /* viewModel.swift */,
 				4214DF992B0670340025BAF5 /* MainView.swift */,
 				42496EB72AFE55BC00B299BC /* NewProjectView.swift */,
@@ -153,7 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42496EB82AFE55BC00B299BC /* NewProjectView.swift in Sources */,
-				4221DD472B0BB9EA00F6E0EB /* modelinfo.swift in Sources */,
+				4221DD472B0BB9EA00F6E0EB /* Trip.swift in Sources */,
 				42342D6C2B03D61500505061 /* additemtolist.swift in Sources */,
 				42496EAC2AFE54DE00B299BC /* ContentView.swift in Sources */,
 				4214DF9A2B0670340025BAF5 /* MainView.swift in Sources */,
@@ -292,7 +292,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tripsync/Preview Content\"";
-				DEVELOPMENT_TEAM = 8Z4W25U7W4;
+				DEVELOPMENT_TEAM = DK5TS324VG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -305,7 +305,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.biancasilvestro.tripsync.tripsync;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biancasilvestro.tripsync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,7 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tripsync/Preview Content\"";
-				DEVELOPMENT_TEAM = 8Z4W25U7W4;
+				DEVELOPMENT_TEAM = DK5TS324VG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -334,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.biancasilvestro.tripsync.tripsync;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biancasilvestro.tripsync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
